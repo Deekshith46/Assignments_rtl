@@ -1,0 +1,65 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Feb 28, 2019 at 06:28:12 IST
+irun
+	-access +rwc
+	-f compile.f
+		../RTL/d_ff.v
+		../RTL/piso.v
+		../RTL/piso_gates.v
+		../RTL/piso_not.v
+		../VERIFICATION/piso_tb.v
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+|
+ncsim: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
+DEFINE sdadc_working /projects/tigershare/sdadc_working
+|
+ncsim: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+Loading snapshot worklib.piso_tb:v .................... Done
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+Simulation complete via $finish(1) at time 540 NS + 0
+../VERIFICATION/piso_tb.v:36 $finish();
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 28, 2019 at 06:28:12 IST  (total: 00:00:00)

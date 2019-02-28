@@ -1,0 +1,3 @@
+irun -access +rwc -f compile.f
+
+
