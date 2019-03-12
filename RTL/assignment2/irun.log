@@ -1,5 +1,5 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Mar 13, 2019 at 00:20:15 IST
+TOOL:	irun(64)	15.20-s051: Started on Mar 13, 2019 at 03:25:16 IST
 irun
 	-access +rwc
 	single_port_mem.v
@@ -29,8 +29,8 @@ DEFINE sdadc_working /projects/tigershare/sdadc_working
 |
 irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
 Recompiling... reason: file './single_port_mem.v' is newer than expected.
-	expected: Wed Mar 13 00:18:35 2019
-	actual:   Wed Mar 13 00:20:13 2019
+	expected: Wed Mar 13 03:23:42 2019
+	actual:   Wed Mar 13 03:24:50 2019
 DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
 |
 irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
@@ -45,6 +45,9 @@ DEFINE sdadc_working /projects/tigershare/sdadc_working
 ncvlog: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
 file: single_port_mem.v
 	module worklib.mem:v
+		errors: 0, warnings: 0
+file: single_port_tb.v
+	module worklib.single_port_tb:v
 		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 2
@@ -80,19 +83,21 @@ ncvlog_cg: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Pe
 DEFINE sdadc_working /projects/tigershare/sdadc_working
 |
 ncvlog_cg: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
-		worklib.mem:v <0x31947d8c>
-			streams:   4, words:  1768
+		worklib.mem:v <0x6062b2f9>
+			streams:   3, words:  1177
+		worklib.single_port_tb:v <0x5cc335e3>
+			streams:   8, words:  4638
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		             Instances  Unique
-		Modules:             3       3
-		Registers:           9       9
-		Scalar wires:        6       -
-		Vectored wires:      5       -
-		Always blocks:       3       3
-		Initial blocks:      2       2
-		Pseudo assignments:  5       5
+		              Instances  Unique
+		Modules:              3       3
+		Registers:           10      10
+		Scalar wires:         6       -
+		Vectored wires:       5       -
+		Always blocks:        3       3
+		Initial blocks:       2       2
+		Pseudo assignments:   5       5
 	Writing initial simulation snapshot: worklib.mem:v
 DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
 |
@@ -103,7 +108,7 @@ ncsim: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permis
 Loading snapshot worklib.mem:v .................... Done
 ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
 ncsim> run
-Simulation complete via $finish(1) at time 75 NS + 0
-./single_port_tb.v:36 $finish();
+Simulation complete via $finish(1) at time 1065 NS + 0
+./single_port_tb.v:45 $finish();
 ncsim> exit
-TOOL:	irun(64)	15.20-s051: Exiting on Mar 13, 2019 at 00:20:15 IST  (total: 00:00:00)
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 13, 2019 at 03:25:16 IST  (total: 00:00:00)

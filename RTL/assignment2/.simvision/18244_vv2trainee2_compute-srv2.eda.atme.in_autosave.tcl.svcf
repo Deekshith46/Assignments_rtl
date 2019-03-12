@@ -67,16 +67,18 @@ set id [waveform add -signals  {
 set id [waveform add -signals  {
 	{wave::single_port_tb.dut.mem[31:0]}
 	} ]
-waveform hierarchy collapse $id
+waveform hierarchy expand $id
 set id [waveform add -signals  {
 	{wave::single_port_tb.dut.din[31:0]}
 	} ]
+waveform format $id -radix %d
 waveform hierarchy collapse $id
 set id [waveform add -signals  {
 	{wave::single_port_tb.dut.readout[31:0]}
 	} ]
+waveform hierarchy collapse $id
 
-waveform xview limits 0 55ns
+waveform xview limits 0 160ns
 
 #
 # Waveform Window Links

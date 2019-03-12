@@ -21,6 +21,8 @@ single_port_mem dut(.clk(clk),
             end
 
 initial begin
+#5
+
 rst = 1'b1;
 we = 1'b0;
 din = 32'd0;
@@ -29,12 +31,19 @@ rst = 1'b0;
 we = 1'b0;
 #10
 we = 1'b1; address=32'd0; din = 32'd30;
-#5
-we = 1'b1; address=32'd1; din = 32'd31;
-#40;
+#10
 we = 1'b0;
+//$display("address = %0d , din = %0d , readout = %0d" , address,din,readout);
+
+#10
+we = 1'b1;address=32'd1; din = 32'd31;
+#10
+we = 1'b0;
+
+///$display("address = %0d , din = %0d , readout = %0d" , address,din,readout);
+#1000;
 $finish();
-#100;
+
 end
 
             
