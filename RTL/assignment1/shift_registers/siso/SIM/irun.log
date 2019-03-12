@@ -1,23 +1,17 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Feb 28, 2019 at 06:18:29 IST
+TOOL:	irun(64)	15.20-s051: Started on Feb 28, 2019 at 23:54:37 IST
 irun
 	-access +rwc
 	-f compile.f
 		../RTL/d_ff.v
 		../RTL/siso.v
 		../VERIFICATION/siso_tb.v
-DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
+include ../../../../../../../../../../cds.lib
 |
-irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
-DEFINE sdadc_working /projects/tigershare/sdadc_working
+irun: *W,DLCPTH (./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib,1): cds.lib No such file '/home/vv2trainee2/Desktop/cds.lib' (cds.lib command ignored).
+include ../../../../../../../../../../cds.lib
 |
-irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
-DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
-|
-irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
-DEFINE sdadc_working /projects/tigershare/sdadc_working
-|
-irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
+irun: *W,DLCPTH (./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib,1): cds.lib No such file '/home/vv2trainee2/Desktop/cds.lib' (cds.lib command ignored).
 DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
 |
 irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
@@ -110,4 +104,4 @@ ncsim> run
 Simulation complete via $finish(1) at time 110 NS + 0
 ../VERIFICATION/siso_tb.v:25 $finish();
 ncsim> exit
-TOOL:	irun(64)	15.20-s051: Exiting on Feb 28, 2019 at 06:18:30 IST  (total: 00:00:01)
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 28, 2019 at 23:54:38 IST  (total: 00:00:01)
