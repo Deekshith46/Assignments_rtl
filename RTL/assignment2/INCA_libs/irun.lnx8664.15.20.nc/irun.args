@@ -4,5 +4,5 @@
 //
 -access
 +rwc
-single_port_mem.v
-single_port_tb.v
+dual_port_mem.v
+dual_port_tb.v

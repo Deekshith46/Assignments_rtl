@@ -5,8 +5,8 @@
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
 -RUNMODE
-single_port_mem.v
-single_port_tb.v
+dual_port_mem.v
+dual_port_tb.v
 -CDSLIB
 ./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
 -HDLVAR

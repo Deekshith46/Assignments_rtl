@@ -1,9 +1,9 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Mar 13, 2019 at 03:25:16 IST
+TOOL:	irun(64)	15.20-s051: Started on Mar 15, 2019 at 20:56:47 IST
 irun
 	-access +rwc
-	single_port_mem.v
-	single_port_tb.v
+	dual_port_mem.v
+	dual_port_tb.v
 DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
 |
 irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
@@ -28,9 +28,9 @@ irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permiss
 DEFINE sdadc_working /projects/tigershare/sdadc_working
 |
 irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
-Recompiling... reason: file './single_port_mem.v' is newer than expected.
-	expected: Wed Mar 13 03:23:42 2019
-	actual:   Wed Mar 13 03:24:50 2019
+Recompiling... reason: file './dual_port_mem.v' is newer than expected.
+	expected: Fri Mar 15 20:59:04 2019
+	actual:   Fri Mar 15 21:00:34 2019
 DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
 |
 irun: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
@@ -43,11 +43,8 @@ ncvlog: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permi
 DEFINE sdadc_working /projects/tigershare/sdadc_working
 |
 ncvlog: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
-file: single_port_mem.v
-	module worklib.mem:v
-		errors: 0, warnings: 0
-file: single_port_tb.v
-	module worklib.single_port_tb:v
+file: dual_port_tb.v
+	module worklib.dual_port_tb:v
 		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 2
@@ -71,10 +68,14 @@ DEFINE sdadc_working /projects/tigershare/sdadc_working
 ncelab: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
-		Caching library 'worklib' ....... Done
 	Top level design units:
-		mem
-		single_port_tb
+		dual_port_tb
+             .read_addr(read_addr),
+                                |
+ncelab: *W,CUVMPW (./dual_port_tb.v,18|32): port sizes differ in port connection (32/5).
+             .write_addr(write_addr),
+                                  |
+ncelab: *W,CUVMPW (./dual_port_tb.v,19|34): port sizes differ in port connection (32/5).
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
 DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
@@ -83,32 +84,31 @@ ncvlog_cg: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Pe
 DEFINE sdadc_working /projects/tigershare/sdadc_working
 |
 ncvlog_cg: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
-		worklib.mem:v <0x6062b2f9>
-			streams:   3, words:  1177
-		worklib.single_port_tb:v <0x5cc335e3>
-			streams:   8, words:  4638
+		worklib.dual_port_tb:v <0x7f56af01>
+			streams:   9, words:  3173
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		              Instances  Unique
-		Modules:              3       3
-		Registers:           10      10
-		Scalar wires:         6       -
-		Vectored wires:       5       -
-		Always blocks:        3       3
-		Initial blocks:       2       2
-		Pseudo assignments:   5       5
-	Writing initial simulation snapshot: worklib.mem:v
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           7       7
+		Scalar wires:        3       -
+		Vectored wires:      4       -
+		Always blocks:       2       2
+		Initial blocks:      2       2
+		Cont. assignments:   1       1
+		Pseudo assignments:  6       6
+	Writing initial simulation snapshot: worklib.dual_port_tb:v
 DEFINE sdadc_working_lay /projects/tigershare/sdadc_working_lay
 |
 ncsim: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,7): cds.lib Permission denied '/projects/tigershare/sdadc_working_lay' (cds.lib command ignored).
 DEFINE sdadc_working /projects/tigershare/sdadc_working
 |
 ncsim: *W,DLCPTH (/tools/cadence/IC617/share/cdssetup/cds.lib,8): cds.lib Permission denied '/projects/tigershare/sdadc_working' (cds.lib command ignored).
-Loading snapshot worklib.mem:v .................... Done
+Loading snapshot worklib.dual_port_tb:v .................... Done
 ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
 ncsim> run
-Simulation complete via $finish(1) at time 1065 NS + 0
-./single_port_tb.v:45 $finish();
+Simulation complete via $finish(1) at time 260 NS + 0
+./dual_port_tb.v:33 $finish();
 ncsim> exit
-TOOL:	irun(64)	15.20-s051: Exiting on Mar 13, 2019 at 03:25:16 IST  (total: 00:00:00)
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 15, 2019 at 20:56:47 IST  (total: 00:00:00)

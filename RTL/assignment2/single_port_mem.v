@@ -4,19 +4,28 @@ input [data_width -1 :0 ] din;
 input [memory_depth - 1 : 0] address; 
 output reg [data_width -1 : 0] readout;
 
-integer i;
 
 reg[data_width-1 : 0] mem[memory_depth -1 : 0];
 
+reg[memory_depth-1:0] reset_count;
+reg reset_done;
 
 always@(posedge clk) begin
     if(rst)begin
-        for( i = 0 ; i < (memory_depth-1) ; i=i+1) begin
-            mem[i] = {data_width{1'b0}};
+    mem[address] <=0;
+        /*reset_count <=0;
+        reset_done <=0; 
         end
-       // mem[address] <= 0;
-    end
-    else begin
+        else if(!reset_count)begin
+            mem[reset_count ] <= 0;
+            reset_count <= reset_count +1;
+        end
+
+         else if(reset_count == memory_depth-1)begin
+            reset_done =1;*/
+        end
+
+        else begin
         if(we)begin
             mem[address] <= din;
         end

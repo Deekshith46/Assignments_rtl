@@ -1,0 +1,11 @@
+s1(18Mar2019:02:56:14):  irun -access +rwc spi_slave.v 
+s2(18Mar2019:02:56:43):  irun -access +rwc spi_slave.v 
+s3(18Mar2019:02:57:05):  irun -access +rwc spi_slave.v 
+s4(18Mar2019:02:58:16):  irun -access +rwc spi_slave.v 
+s5(18Mar2019:02:58:29):  irun -access +rwc spi_slave.v 
+s6(18Mar2019:02:58:41):  irun -access +rwc spi_slave.v 
+s7(18Mar2019:02:59:37):  irun -access +rwc spi_slave.v 
+s8(18Mar2019:03:00:26):  irun -access +rwc spi_slave.v 
+s9(19Mar2019:00:56:06):  irun -access +rwc spi_slave.v 
+s10(19Mar2019:00:56:08):  irun -access +rwc spi_slave.v 
+s11(19Mar2019:00:59:20):  irun -access +rwc spi_slave.v 

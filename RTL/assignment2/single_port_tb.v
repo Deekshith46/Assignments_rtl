@@ -21,8 +21,6 @@ single_port_mem dut(.clk(clk),
             end
 
 initial begin
-#5
-
 rst = 1'b1;
 we = 1'b0;
 din = 32'd0;
